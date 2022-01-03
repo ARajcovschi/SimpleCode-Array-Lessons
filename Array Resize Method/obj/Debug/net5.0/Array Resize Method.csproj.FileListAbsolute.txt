@@ -1,0 +1,16 @@
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\bin\Debug\net5.0\Array Resize Method.exe
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\bin\Debug\net5.0\Array Resize Method.deps.json
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\bin\Debug\net5.0\Array Resize Method.runtimeconfig.json
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\bin\Debug\net5.0\Array Resize Method.runtimeconfig.dev.json
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\bin\Debug\net5.0\Array Resize Method.dll
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\bin\Debug\net5.0\ref\Array Resize Method.dll
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\bin\Debug\net5.0\Array Resize Method.pdb
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\Array Resize Method.csproj.AssemblyReference.cache
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\Array Resize Method.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\Array Resize Method.AssemblyInfoInputs.cache
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\Array Resize Method.AssemblyInfo.cs
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\Array Resize Method.csproj.CoreCompileInputs.cache
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\Array Resize Method.dll
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\ref\Array Resize Method.dll
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\Array Resize Method.pdb
+C:\Users\alexa\source\repos\Array Lessons\Array Resize Method\obj\Debug\net5.0\Array Resize Method.genruntimeconfig.cache
