@@ -7,7 +7,7 @@ namespace Method_Test
         static string CharPrint(string Character, int Number)
         {
             Console.WriteLine("Line by your param's: ");
-            string result="";
+            string result = "";
             for (int i = 0; i < Number; i++)
             {
                 //Console.Write(Character+"\t");
@@ -16,7 +16,7 @@ namespace Method_Test
             return result;
         }
 
-        static void IndexOfElement(int [] ArrayName, int SearchValue)
+        static void IndexOfElement(int[] ArrayName, int SearchValue)
         {
             for (int i = 0; i < ArrayName.Length; i++)
             {
@@ -25,27 +25,22 @@ namespace Method_Test
                     Console.WriteLine("Index of your element is: " + i);
                     break;
                 }
-                
             }
-        
-        
-        
+
         }
-               
+
         static void Main(string[] args)
         {
-
-
             ArrayDeleteMethod.DeleteElem()
             string a;
-             Console.Write("Select Output Character: "+ "\n");
-             a = Console.ReadLine();
-             Console.Write("Select quantity: "+ "\n");
-             int b = int.Parse(Console.ReadLine());
+            Console.Write("Select Output Character: " + "\n");
+            a = Console.ReadLine();
+            Console.Write("Select quantity: " + "\n");
+            int b = int.Parse(Console.ReadLine());
 
-             string res = CharPrint(a, b);
+            string res = CharPrint(a, b);
 
-            
+
 
             //int[] myArray = new int[] { 3, 8, 4, 6, 8, 9, 4546, 645654, 454, 78, 15 };
 
