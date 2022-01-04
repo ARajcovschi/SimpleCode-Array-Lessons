@@ -14,7 +14,16 @@ class ArrayDeleteMethod
 
         myArray = newArray;
     }
+    public static void DeleteFirst(ref int[] myArray)
+    {
+        DeleteElem(ref myArray, 0);
+    }
 
+    public static void DeleteLast(ref int[] myArray)
+    {
+        DeleteElem(ref myArray, myArray.Length - 1);
+    }
 
-
+    //for (int i = index+1; i<myArray.Length; i++)
+    // newArray[i-1] = myArray[i];
 }
