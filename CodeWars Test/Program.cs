@@ -8,7 +8,7 @@ namespace CodeWars_Test
         static void Main(string[] args)
         {
           
-            string Text = int
+         
 
 
         }

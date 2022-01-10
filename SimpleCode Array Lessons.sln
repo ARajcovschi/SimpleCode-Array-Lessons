@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Method Test", "Method Test\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array Resize Method", "Array Resize Method\Array Resize Method.csproj", "{B17DA77E-3837-4A71-B30D-B43DEB60B837}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars Test", "CodeWars Test\CodeWars Test.csproj", "{4D55086E-5723-427B-9CBF-0DBC1C7634DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeWars Test", "CodeWars Test\CodeWars Test.csproj", "{4D55086E-5723-427B-9CBF-0DBC1C7634DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursion Home Task", "Recursion Home Task\Recursion Home Task.csproj", "{6C3B6AAA-A69C-4ACD-8E52-4D4FF879C8C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4D55086E-5723-427B-9CBF-0DBC1C7634DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D55086E-5723-427B-9CBF-0DBC1C7634DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D55086E-5723-427B-9CBF-0DBC1C7634DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C3B6AAA-A69C-4ACD-8E52-4D4FF879C8C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3B6AAA-A69C-4ACD-8E52-4D4FF879C8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3B6AAA-A69C-4ACD-8E52-4D4FF879C8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3B6AAA-A69C-4ACD-8E52-4D4FF879C8C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

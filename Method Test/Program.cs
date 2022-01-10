@@ -31,7 +31,7 @@ namespace Method_Test
 
         static void Main(string[] args)
         {
-            ArrayDeleteMethod.DeleteElem()
+            
             string a;
             Console.Write("Select Output Character: " + "\n");
             a = Console.ReadLine();
