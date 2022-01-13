@@ -7,7 +7,7 @@ namespace Recursion_Home_Task
         static void ArrayPrint(ref int[] myArray, int i = 0)
         {
             Console.Write(myArray[i] + "\t");
-            if (i >= myArray.Length - 1)
+            if (i >= myArray.Length - 1 )
             {
                 Console.WriteLine();
                 return;
