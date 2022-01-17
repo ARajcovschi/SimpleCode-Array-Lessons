@@ -19,24 +19,19 @@ namespace Fibonacci_Numbers
                 Console.Write(FibArr[i] + "\t");
             }
         }
-
-        static void FibonacciRec(int[]RecArray, int i = 2)
+        static void FibonacciRec(int[] RecArray, int i = 2)
         {
             RecArray[i] = RecArray[i - 2] + RecArray[i - 1];
-            if (i >= RecArray.Length-1) return ;
+            if (i >= RecArray.Length - 1) return;
             i++;
             FibonacciRec(RecArray, i);
         }
         static int Factorial(int x)
         {
-            
             if (x == 1) return 1;
             int result = x * Factorial(x - 1);
             return result;
-            
         }
-
-
         static void PrintArray(int[] myArray)
         {
             Console.WriteLine();
@@ -46,20 +41,17 @@ namespace Fibonacci_Numbers
             }
             Console.WriteLine();
         }
-
-
         static void Main(string[] args)
         {
             Fibonacci(20);
 
-            int[] RecArr= new int[20];
+            int[] RecArr = new int[20];
             RecArr[0] = 0;
             RecArr[1] = 1;
             FibonacciRec(RecArr);
             PrintArray(RecArr);
 
             Console.WriteLine($"Factorial of 5 = " + Factorial(5)); ;
-
         }
     }
 }
