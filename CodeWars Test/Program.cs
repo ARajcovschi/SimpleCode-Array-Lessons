@@ -1,5 +1,6 @@
 ﻿using System;
 using CodeWars_Test.Sorting;
+using CodeWars_Test.Tasks;
 
 namespace CodeWars_Test
 {
@@ -12,13 +13,15 @@ namespace CodeWars_Test
             Console.Write("Input Your Number: ");
             int number = int.Parse(Console.ReadLine());
 
-            var descSortBubble = new DescendingBubbleSorting();
-            Console.WriteLine(descSortBubble.DescendingOrder(number));
+           // var descSortBubble = new DescendingBubbleSorting();
+           // Console.WriteLine(descSortBubble.DescendingOrder(number));
 
-            var descSortShake = new DescendingShakingSorting();
-            Console.WriteLine(descSortShake.ShakerSort(number));
+          //  var descSortShake = new DescendingShakingSorting();
+          //  Console.WriteLine(descSortShake.ShakerSort(number));
 
-
+            var square = new SquareDigits();
+            Console.WriteLine(square.SquareDigit(number));
+            
         }
     }
 }

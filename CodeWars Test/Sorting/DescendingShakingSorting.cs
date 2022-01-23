@@ -8,7 +8,7 @@ namespace CodeWars_Test.Sorting
 {
     class DescendingShakingSorting
     {
-        public static int ShakerSort(int number)
+        public int ShakerSort(int number)
         {
             int[] NewArrayForSort = Helper.NumToArray(number);
 
