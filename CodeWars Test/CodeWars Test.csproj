@@ -6,4 +6,8 @@
     <RootNamespace>CodeWars_Test</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Tasks\" />
+  </ItemGroup>
+
 </Project>
