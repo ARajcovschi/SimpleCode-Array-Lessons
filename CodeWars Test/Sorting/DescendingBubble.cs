@@ -12,15 +12,12 @@ namespace CodeWars_Test.Sorting
         {
             int[] NumberArr = Helper.NumToArray(num);
 
-            int tmp;
             for (int i = 0; i < NumberArr.Length; i++)
             {
                 for (int j = i + 1; j < NumberArr.Length; j++)
                     if (NumberArr[i] < NumberArr[j])
                     {
-                        tmp = NumberArr[j];
-                        NumberArr[j] = NumberArr[i];
-                        NumberArr[i] = tmp;
+                        Helper.Swap(ref NumberArr[j], ref NumberArr[i]);
                     }
             }
             string result = string.Join("", NumberArr);
