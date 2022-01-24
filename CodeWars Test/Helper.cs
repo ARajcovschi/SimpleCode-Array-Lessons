@@ -36,5 +36,16 @@ namespace CodeWars_Test
             a = b;
             b = c;
         }
+
+        public static string ReverseString(string str="world")
+        {
+            char[] array = new char[str.Length];
+            int forward = 0;
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                array[forward++] = str[i];
+            }
+            return new string(array);
+        }
     }
 }
