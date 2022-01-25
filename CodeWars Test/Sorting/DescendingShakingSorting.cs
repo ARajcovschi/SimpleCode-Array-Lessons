@@ -40,7 +40,6 @@ namespace CodeWars_Test.Sorting
 
             return sequence;
         }
-
     }
 }
 

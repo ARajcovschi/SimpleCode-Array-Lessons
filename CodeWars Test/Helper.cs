@@ -10,7 +10,6 @@ namespace CodeWars_Test
     {
         public static int[] NumToArray(int number)
         {
-
             List<int> myNumbers = new();
             for (int i = 0; i < int.MaxValue; i++)
             {
