@@ -8,7 +8,7 @@ namespace CodeWars_Test.Sorting
 {
     class DescendingBubbleSorting
     {
-        public int DescendingOrder(int num = 12345)
+        public int DescendingOrder(int num)
         {
             int[] NumberArr = Helper.NumToArray(num);
 

@@ -37,7 +37,7 @@ namespace CodeWars_Test
             b = c;
         }
 
-        public static string ReverseString(string str="world")
+        public static string ReverseString(string str)
         {
             char[] array = new char[str.Length];
             int forward = 0;
