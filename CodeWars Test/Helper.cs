@@ -8,6 +8,12 @@ namespace CodeWars_Test
 {
     class Helper
     {
+        public static int GetNumber()
+        {
+            Console.Write("Input Your Number: ");
+            int number = int.Parse(Console.ReadLine());
+            return number;
+        }
         public static int[] NumToArray(int number)
         {
             List<int> myNumbers = new();

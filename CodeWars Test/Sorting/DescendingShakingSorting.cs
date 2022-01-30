@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CodeWars_Test.Sorting;
 
 namespace CodeWars_Test.Sorting
 {
     class DescendingShakingSorting
     {
-        public int ShakerSort(int number)
+        public static int ShakerSort(int number)
         {
             int[] NewArrayForSort = Helper.NumToArray(number);
 
@@ -37,7 +38,7 @@ namespace CodeWars_Test.Sorting
             }
             string result = string.Join("", NewArrayForSort);
             int sequence = int.Parse(result);
-
+            Console.WriteLine("Your Shaking Arranged Number is: "+sequence);
             return sequence;
         }
     }

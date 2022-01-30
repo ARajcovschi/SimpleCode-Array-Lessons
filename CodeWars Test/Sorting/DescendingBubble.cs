@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CodeWars_Test.Sorting;
 
 namespace CodeWars_Test.Sorting
 {
     class DescendingBubbleSorting
     {
-        public int DescendingOrder(int num)
+        public static int DescendingOrder(int num)
         {
             int[] NumberArr = Helper.NumToArray(num);
 
@@ -16,13 +17,11 @@ namespace CodeWars_Test.Sorting
             {
                 for (int j = i + 1; j < NumberArr.Length; j++)
                     if (NumberArr[i] < NumberArr[j])
-                    {
                         Helper.Swap(ref NumberArr[j], ref NumberArr[i]);
-                    }
             }
             string result = string.Join("", NumberArr);
             int sequence = int.Parse(result);
-
+            Console.WriteLine("Your Bubble Arranged Number is: " + sequence);
             return sequence;
         }
     }

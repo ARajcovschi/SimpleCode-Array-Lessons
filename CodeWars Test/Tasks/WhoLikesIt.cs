@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace CodeWars_Test.Tasks
 {
-
     class WhoLikesIt
     {
         public static string Likes(string[] name)
