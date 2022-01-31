@@ -6,23 +6,26 @@ using CodeWars_Test.Tasks;
 namespace CodeWars_Test
 {
 
-    class Program : ISortTypeSelect
+    class Program 
     {
-        public void SelectSort()
+        public static ISorting SelectSort()
         {
+            ISorting sorting = null;
             Console.WriteLine("Choose Type of Sorting \n 1 - Bubble Sorting \n 2 - Shaker Sorting");
             int choice = int.Parse(Console.ReadLine());
             if (choice == 1)
-                DescendingBubbleSorting.DescendingOrder(Helper.GetNumber());
+               sorting = new DescendingBubbleSorting();
             if (choice == 2)
-                DescendingShakingSorting.ShakerSort(Helper.GetNumber());
+              sorting = new DescendingShakingSorting();
+            return sorting;
         }
 
         static void Main(string[] args)
         {
-            var program = new Program();
-            program.SelectSort();
-            ;
+
+            var tmp = SelectSort();
+            tmp.Sort(789);
+           
             //var descSortBubble = new DescendingBubbleSorting();
             //Console.WriteLine(descSortBubble.DescendingOrder(number));
 

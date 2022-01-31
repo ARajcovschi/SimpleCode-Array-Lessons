@@ -11,8 +11,9 @@ using System.Threading.Tasks;
 
 namespace CodeWars_Test.Sorting
 {
-    interface ISortTypeSelect
+    interface ISorting
     {
-        void SelectSort();
+        
+        int Sort(int num);
     }
 }

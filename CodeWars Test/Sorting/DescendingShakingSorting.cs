@@ -7,9 +7,9 @@ using CodeWars_Test.Sorting;
 
 namespace CodeWars_Test.Sorting
 {
-    class DescendingShakingSorting
+    class DescendingShakingSorting :ISorting
     {
-        public static int ShakerSort(int number)
+        public int Sort (int number)
         {
             int[] NewArrayForSort = Helper.NumToArray(number);
 

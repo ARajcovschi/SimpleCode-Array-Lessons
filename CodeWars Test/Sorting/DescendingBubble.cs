@@ -7,9 +7,10 @@ using CodeWars_Test.Sorting;
 
 namespace CodeWars_Test.Sorting
 {
-    class DescendingBubbleSorting
+    class DescendingBubbleSorting:ISorting
     {
-        public static int DescendingOrder(int num)
+       
+        public int Sort(int num)
         {
             int[] NumberArr = Helper.NumToArray(num);
 
