@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeWars Test", "CodeWars T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recursion Home Task", "Recursion Home Task\Recursion Home Task.csproj", "{6C3B6AAA-A69C-4ACD-8E52-4D4FF879C8C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci Numbers", "Fibonacci Numbers\Fibonacci Numbers.csproj", "{ADD1BFF2-0874-4FBF-95C9-671873C5E2E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibonacci Numbers", "Fibonacci Numbers\Fibonacci Numbers.csproj", "{ADD1BFF2-0874-4FBF-95C9-671873C5E2E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalc", "WpfCalc\WpfCalc.csproj", "{8188BB4F-401B-4F0C-8486-18ED29D28D1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{ADD1BFF2-0874-4FBF-95C9-671873C5E2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADD1BFF2-0874-4FBF-95C9-671873C5E2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADD1BFF2-0874-4FBF-95C9-671873C5E2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8188BB4F-401B-4F0C-8486-18ED29D28D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8188BB4F-401B-4F0C-8486-18ED29D28D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8188BB4F-401B-4F0C-8486-18ED29D28D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8188BB4F-401B-4F0C-8486-18ED29D28D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

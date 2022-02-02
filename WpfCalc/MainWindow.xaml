@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfCalc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCalc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnDEL" Content="CLR" HorizontalAlignment="Left" Margin="30,289,0,0" VerticalAlignment="Top" Click="btnDEL_Click" Width="60" Height="30"/>
+        <TextBox x:Name="tbOutput" HorizontalAlignment="Left" Margin="25,19,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" Height="55" TextChanged="TextBox_TextChanged" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btnNumberZero" Content="0" HorizontalAlignment="Left" Margin="123,289,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberZero_Click"/>
+        <Button x:Name="btnSeparate" Content="," HorizontalAlignment="Left" Margin="220,289,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnSeparate_Click"/>
+        <Button x:Name="btnNumberSeven" Content="7" HorizontalAlignment="Left" Margin="30,124,0,0" VerticalAlignment="Top" Click="btnNumberSeven_Click" Width="60" Height="30"/>
+        <Button x:Name="btnNumberEight" Content="8" HorizontalAlignment="Left" Margin="123,124,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberEight_Click"/>
+        <Button x:Name="btnNumberNine" Content="9" HorizontalAlignment="Left" Margin="220,124,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberNine_Click"/>
+        <Button x:Name="btnNumberFour" Content="4" HorizontalAlignment="Left" Margin="30,177,0,0" VerticalAlignment="Top" Click="btnNumberFour_Click" Width="60" Height="30"/>
+        <Button x:Name="btnNumberFive" Content="5" HorizontalAlignment="Left" Margin="123,177,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberFive_Click"/>
+        <Button x:Name="btnNumberSix" Content="6" HorizontalAlignment="Left" Margin="220,177,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberSix_Click"/>
+        <Button x:Name="btnNumberOne" Content="1" HorizontalAlignment="Left" Margin="30,234,0,0" VerticalAlignment="Top" Click="btnNumberOne_Click" Width="60" Height="30"/>
+        <Button x:Name="btnNumberTwo" Content="2" HorizontalAlignment="Left" Margin="123,234,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberTwo_Click"/>
+        <Button x:Name="btnNumberThree" Content="3" HorizontalAlignment="Left" Margin="220,234,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberThree_Click"/>
+        <Button x:Name="btnPLUS" Content="+" HorizontalAlignment="Left" Margin="305,124,0,0" VerticalAlignment="Top" Click="btnPLUS_Click" Width="60" Height="50"/>
+        <Button x:Name="btnMINUS" Content="-" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Center" Click="btnMINUS_Click" Width="60" Height="50"/>
+        <Button x:Name="btnMULTIPLY" Content="*" HorizontalAlignment="Left" Margin="385,124,0,0" VerticalAlignment="Top" Click="btnMULTIPLY_Click" Width="60" Height="50"/>
+        <Button x:Name="btnDIVISION" Content="/" HorizontalAlignment="Left" Margin="385,0,0,0" VerticalAlignment="Center" Click="btnDIVISION_Click" Width="60" Height="50"/>
+        <Button x:Name="btnRESOLVE" Content="=" HorizontalAlignment="Left" Margin="305,259,0,0" VerticalAlignment="Top" Click="btnRESOLVE_Click" Width="140" Height="50"/>
+
+    </Grid>
+</Window>
