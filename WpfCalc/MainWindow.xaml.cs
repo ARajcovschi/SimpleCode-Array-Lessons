@@ -27,7 +27,7 @@ namespace WpfCalc
         NumberInput firstValue = new();
         NumberInput secondValue = new();
         NumberInput action = new();
-        
+        NumberInput mem = new();
 
         public MainWindow()
         {
@@ -100,6 +100,7 @@ namespace WpfCalc
             number.Number = null;
             firstValue.Number = null;
             secondValue.Number = null;
+            mem.Number = null;
             tbOutput.Text = number.Number;
         }
 
@@ -111,18 +112,26 @@ namespace WpfCalc
 
         private void btnPLUS_Click(object sender, RoutedEventArgs e)
         {
+            action.Action = '+';
+            tbOutput.Text = "+";
+
             if (firstValue.Number == null)
             {
                 firstValue.Number = number.Number;
+                secondValue.Number = "0";
                 number.Number = null;
             }
-            else
-            {
-                secondValue.Number = number.Number;
-            }
 
-            action.Action = '+';
-            tbOutput.Text = "+";
+            else
+            { secondValue.Number = number.Number; }
+
+
+            double result = firstValue.StrToDouble(firstValue.Number) + secondValue.StrToDouble(secondValue.Number);
+            tbOutput.Text = result.ToString();
+            firstValue.Number = result.ToString();
+            number.Number = null;
+            secondValue.Number = null;
+
         }
 
         private void btnMULTIPLY_Click(object sender, RoutedEventArgs e)
@@ -130,14 +139,21 @@ namespace WpfCalc
             if (firstValue.Number == null)
             {
                 firstValue.Number = number.Number;
+                secondValue.Number = "1";
                 number.Number = null;
             }
+
             else
-            {
-                secondValue.Number = number.Number;
-            }
+            { secondValue.Number = number.Number; }
+
             action.Action = '*';
             tbOutput.Text = "*";
+
+            double result = firstValue.StrToDouble(firstValue.Number) * secondValue.StrToDouble(secondValue.Number);
+            tbOutput.Text = result.ToString();
+            firstValue.Number = result.ToString();
+            number.Number = null;
+            secondValue.Number = null;
         }
 
         private void btnMINUS_Click(object sender, RoutedEventArgs e)
@@ -145,14 +161,21 @@ namespace WpfCalc
             if (firstValue.Number == null)
             {
                 firstValue.Number = number.Number;
+                secondValue.Number = "0";
                 number.Number = null;
             }
+
             else
-            {
-                secondValue.Number = number.Number;
-            }
+            { secondValue.Number = number.Number; }
+
             action.Action = '-';
             tbOutput.Text = "-";
+
+            double result = firstValue.StrToDouble(firstValue.Number) - secondValue.StrToDouble(secondValue.Number);
+            tbOutput.Text = result.ToString();
+            firstValue.Number = result.ToString();
+            number.Number = null;
+            secondValue.Number = null;
         }
 
         private void btnDIVISION_Click(object sender, RoutedEventArgs e)
@@ -160,53 +183,67 @@ namespace WpfCalc
             if (firstValue.Number == null)
             {
                 firstValue.Number = number.Number;
+                secondValue.Number = "1";
                 number.Number = null;
             }
+
             else
-            {
-                secondValue.Number = number.Number;
-            }
+            { secondValue.Number = number.Number; }
+
             action.Action = '/';
             tbOutput.Text = "/";
+
+            double result = firstValue.StrToDouble(firstValue.Number) / secondValue.StrToDouble(secondValue.Number);
+            tbOutput.Text = result.ToString();
+            firstValue.Number = result.ToString();
+            number.Number = null;
+            secondValue.Number = null;
         }
 
         private void btnRESOLVE_Click(object sender, RoutedEventArgs e)
         {
-            int result = 0;
-            secondValue.Number = number.Number;
-            if (action.Action == '+')
-            {
-                result = firstValue.StrToInt(firstValue.Number) + secondValue.StrToInt(secondValue.Number);
-            }
+            double result = 0;
+            if (secondValue.Number == null)
+                secondValue.Number = number.Number;
 
+            if (action.Action == '+')
+                result = firstValue.StrToDouble(firstValue.Number) + secondValue.StrToDouble(secondValue.Number);
             tbOutput.Text = result.ToString();
 
             if (action.Action == '-')
-            {
-                result = firstValue.StrToInt(firstValue.Number) - secondValue.StrToInt(secondValue.Number);
-            }
-
+                result = firstValue.StrToDouble(firstValue.Number) - secondValue.StrToDouble(secondValue.Number);
             tbOutput.Text = result.ToString();
 
             if (action.Action == '*')
-            {
-                result = firstValue.StrToInt(firstValue.Number) * secondValue.StrToInt(secondValue.Number);
-            }
-
+                result = firstValue.StrToDouble(firstValue.Number) * secondValue.StrToDouble(secondValue.Number);
             tbOutput.Text = result.ToString();
 
             if (action.Action == '/')
-            {
-                result = firstValue.StrToInt(firstValue.Number) / secondValue.StrToInt(secondValue.Number);
-            }
-
+                result = firstValue.StrToDouble(firstValue.Number) / secondValue.StrToDouble(secondValue.Number);
             tbOutput.Text = result.ToString();
 
+            firstValue.Number = result.ToString();
             number.Number = null;
-            firstValue.Number = null;
             secondValue.Number = null;
-            
 
+
+        }
+
+        private void btnMEM_Click(object sender, RoutedEventArgs e)
+        {
+            if (mem.Number == null)
+                mem.Number = number.Number;
+            else
+            {
+                secondValue.Number = mem.Number;
+                tbOutput.Text = mem.Number;
+            }
+        }
+
+        private void btnMEMclr_Click(object sender, RoutedEventArgs e)
+        {
+            if (mem.Number != null)
+                mem.Number = null;
         }
     }
 }

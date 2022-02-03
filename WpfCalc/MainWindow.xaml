@@ -20,11 +20,13 @@
         <Button x:Name="btnNumberOne" Content="1" HorizontalAlignment="Left" Margin="30,234,0,0" VerticalAlignment="Top" Click="btnNumberOne_Click" Width="60" Height="30"/>
         <Button x:Name="btnNumberTwo" Content="2" HorizontalAlignment="Left" Margin="123,234,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberTwo_Click"/>
         <Button x:Name="btnNumberThree" Content="3" HorizontalAlignment="Left" Margin="220,234,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberThree_Click"/>
-        <Button x:Name="btnPLUS" Content="+" HorizontalAlignment="Left" Margin="305,124,0,0" VerticalAlignment="Top" Click="btnPLUS_Click" Width="60" Height="50"/>
-        <Button x:Name="btnMINUS" Content="-" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Center" Click="btnMINUS_Click" Width="60" Height="50"/>
-        <Button x:Name="btnMULTIPLY" Content="*" HorizontalAlignment="Left" Margin="385,124,0,0" VerticalAlignment="Top" Click="btnMULTIPLY_Click" Width="60" Height="50"/>
-        <Button x:Name="btnDIVISION" Content="/" HorizontalAlignment="Left" Margin="385,0,0,0" VerticalAlignment="Center" Click="btnDIVISION_Click" Width="60" Height="50"/>
-        <Button x:Name="btnRESOLVE" Content="=" HorizontalAlignment="Left" Margin="305,259,0,0" VerticalAlignment="Top" Click="btnRESOLVE_Click" Width="140" Height="50"/>
+        <Button x:Name="btnPLUS" Content="+" HorizontalAlignment="Left" Margin="305,124,0,0" VerticalAlignment="Top" Click="btnPLUS_Click" Width="60" Height="50" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btnMINUS" Content="-" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Center" Click="btnMINUS_Click" Width="60" Height="50" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btnMULTIPLY" Content="*" HorizontalAlignment="Left" Margin="385,124,0,0" VerticalAlignment="Top" Click="btnMULTIPLY_Click" Width="60" Height="50" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btnDIVISION" Content="/" HorizontalAlignment="Left" Margin="385,0,0,0" VerticalAlignment="Center" Click="btnDIVISION_Click" Width="60" Height="50" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btnRESOLVE" Content="=" HorizontalAlignment="Left" Margin="305,269,0,0" VerticalAlignment="Top" Click="btnRESOLVE_Click" Width="140" Height="50" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btnMEM" Content="MEM+" HorizontalAlignment="Left" Margin="30,344,0,0" VerticalAlignment="Top" Click="btnMEM_Click" Width="123" Height="50" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btnMEMclr" Content="MEM-" HorizontalAlignment="Left" Margin="178,344,0,0" VerticalAlignment="Top" Click="btnMEMclr_Click" Width="122" Height="50" FontSize="24" FontWeight="Bold"/>
 
     </Grid>
 </Window>

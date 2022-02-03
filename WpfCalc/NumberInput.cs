@@ -9,18 +9,30 @@ namespace WpfCalc
     public class NumberInput
 
     {
-        public NumberInput()
-        {
-            string number = null;
-        }
-
         public string Number { get; set; }
-        public int StrToInt(string number)
+        public double StrToDouble(string number)
         {
-            int intNum = int.Parse(number);
-            return intNum;
+            double dNum = double.Parse(number);
+            return dNum;
         }
 
+        public void ActionSelect(char action)
+        {
+            //if (firstValue.Number == null)
+            
+            //    firstValue.Number = number.Number;
+            //    number.Number = null;
+
+            //if (firstValue.Number != null)
+            //    secondValue.Number = number.Number;
+
+
+            //double result = firstValue.StrToDouble(firstValue.Number) + secondValue.StrToDouble(secondValue.Number);
+            //tbOutput.Text = result.ToString();
+            //firstValue.Number = result.ToString();
+            //number.Number = null;
+            //secondValue.Number = null;
+        }
         public char Action { get; set; }
 
     }
