@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace WpfCalc
 {
-    public class NumberInput
-
+    //TODO set проверка на число
+    public class NumberWrapper
     {
-        public string Number { get; set; }
+        public string NumberStr { get; set; }
         public double StrToDouble(string number)
         {
             double dNum = double.Parse(number);
             return dNum;
         }
-        public char Action { get; set; }
+
+
+        public double Number
+        {
+            get { return double.Parse(NumberStr); }
+        }
 
     }
 }

@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="btnDEL" Content="CLR" HorizontalAlignment="Left" Margin="30,289,0,0" VerticalAlignment="Top" Click="btnDEL_Click" Width="60" Height="30"/>
-        <TextBox x:Name="tbOutput" HorizontalAlignment="Left" Margin="25,19,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" Height="55" TextChanged="TextBox_TextChanged" FontSize="24" FontWeight="Bold"/>
+        <TextBox x:Name="tbOutput" HorizontalAlignment="Left" Margin="25,19,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" Height="55"  FontSize="24" FontWeight="Bold"/>
         <Button x:Name="btnNumberZero" Content="0" HorizontalAlignment="Left" Margin="123,289,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnNumberZero_Click"/>
         <Button x:Name="btnSeparate" Content="," HorizontalAlignment="Left" Margin="220,289,0,0" VerticalAlignment="Top" Width="60" Height="30" Click="btnSeparate_Click"/>
         <Button x:Name="btnNumberSeven" Content="7" HorizontalAlignment="Left" Margin="30,124,0,0" VerticalAlignment="Top" Click="btnNumberSeven_Click" Width="60" Height="30"/>

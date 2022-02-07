@@ -23,246 +23,168 @@ namespace WpfCalc
     public partial class MainWindow : Window
     {
 
-        NumberInput number = new NumberInput();
-        NumberInput firstValue = new();
-        NumberInput secondValue = new();
-        NumberInput action = new();
-        NumberInput mem = new();
+        NumberWrapper cacheInput = new();
+        NumberWrapper firstValue = new();
+        NumberWrapper mem = new();
+        string mathFunc = null;
 
         public MainWindow()
         {
             InitializeComponent();
         }
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+
+        public void InputDigit(string num)
         {
+            cacheInput.NumberStr += num;
+            tbOutput.Text = cacheInput.NumberStr;
+        }
+        public void MathAction(string operation)
+        {
+            tbOutput.Text = operation;
+
+            if (firstValue.NumberStr == null)
+            {
+                firstValue.NumberStr = cacheInput.NumberStr;
+                cacheInput.NumberStr = null;
+            }
+
+            else
+            {
+                Resolve();
+            }
+            mathFunc = operation;
+        }
+        public double Resolve()
+        {
+            double result = 0;
+
+            if (mathFunc == "+")
+                result = firstValue.Number + cacheInput.Number;
+
+            if (mathFunc == "-")
+                result = firstValue.Number - cacheInput.Number;
+
+            if (mathFunc == "*")
+                result = firstValue.Number * cacheInput.Number;
+
+            if (mathFunc == "/")
+                result = firstValue.Number / cacheInput.Number;
+
+            firstValue.NumberStr = result.ToString();
+            tbOutput.Text = result.ToString();
+            cacheInput.NumberStr = null;
+            return result;
 
         }
+        #region Digit Buttons handlers
         private void btnNumberOne_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "1";
-            tbOutput.Text = number.Number;
+            InputDigit("1");
+
         }
         private void btnNumberTwo_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "2";
-            tbOutput.Text = number.Number;
+            InputDigit("2"); ;
         }
         private void btnNumberThree_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "3";
-            tbOutput.Text = number.Number;
+            InputDigit("3");
         }
 
         private void btnNumberFour_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "4";
-            tbOutput.Text = number.Number;
+            InputDigit("4");
         }
 
         private void btnNumberFive_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "5";
-            tbOutput.Text = number.Number;
+            InputDigit("5");
         }
 
         private void btnNumberSix_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "6";
-            tbOutput.Text = number.Number;
+            InputDigit("6");
         }
 
         private void btnNumberSeven_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "7";
-            tbOutput.Text = number.Number;
+            InputDigit("7"); ;
         }
 
         private void btnNumberEight_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "8";
-            tbOutput.Text = number.Number;
+            InputDigit("8"); ;
         }
 
         private void btnNumberNine_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "9";
-            tbOutput.Text = number.Number;
+            InputDigit("9");
         }
 
         private void btnNumberZero_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += "0";
-            tbOutput.Text = number.Number;
+            InputDigit("0");
         }
+        #endregion
 
         private void btnDEL_Click(object sender, RoutedEventArgs e)
         {
-            number.Number = null;
-            firstValue.Number = null;
-            secondValue.Number = null;
-            mem.Number = null;
-            action.Action = ' ';
-            tbOutput.Text = number.Number;
+            cacheInput.NumberStr = null;
+            firstValue.NumberStr = null;
+            mem.NumberStr = null;
+            mathFunc = string.Empty;
+            tbOutput.Text = cacheInput.NumberStr;
         }
 
         private void btnSeparate_Click(object sender, RoutedEventArgs e)
         {
-            number.Number += ",";
-            tbOutput.Text = number.Number;
+            if (cacheInput.NumberStr.Contains(","))
+            {
+                return;
+            }
+            InputDigit(",");
         }
 
         private void btnPLUS_Click(object sender, RoutedEventArgs e)
         {
-            action.Action = '+';
-            tbOutput.Text = "+";
-
-            if (firstValue.Number == null)
-            {
-                firstValue.Number = number.Number;
-                secondValue.Number = "0";
-                number.Number = null;
-            }
-
-            else
-            {
-                secondValue.Number = number.Number;
-
-                double result = firstValue.StrToDouble(firstValue.Number) + secondValue.StrToDouble(secondValue.Number);
-                tbOutput.Text = result.ToString();
-                firstValue.Number = result.ToString();
-                number.Number = null;
-                secondValue.Number = null;
-            }
+            MathAction("+");
         }
 
         private void btnMULTIPLY_Click(object sender, RoutedEventArgs e)
         {
-            action.Action = '*';
-            tbOutput.Text = "*";
-
-            if (firstValue.Number == null)
-            {
-                firstValue.Number = number.Number;
-                secondValue.Number = "1";
-                number.Number = null;
-            }
-
-            else
-            {
-                secondValue.Number = number.Number;
-
-                double result = firstValue.StrToDouble(firstValue.Number) * secondValue.StrToDouble(secondValue.Number);
-                tbOutput.Text = result.ToString();
-                firstValue.Number = result.ToString();
-                number.Number = null;
-                secondValue.Number = null;
-            }
+            MathAction("*");
         }
 
         private void btnMINUS_Click(object sender, RoutedEventArgs e)
         {
-            action.Action = '-';
-            tbOutput.Text = "-";
-            if (firstValue.Number == null)
-            {
-                firstValue.Number = number.Number;
-                secondValue.Number = "0";
-                number.Number = null;
-            }
-
-            else
-            {
-                secondValue.Number = number.Number;
-
-                double result = firstValue.StrToDouble(firstValue.Number) - secondValue.StrToDouble(secondValue.Number);
-                tbOutput.Text = result.ToString();
-                firstValue.Number = result.ToString();
-                number.Number = null;
-                secondValue.Number = null;
-            }
+            MathAction("-");
         }
 
         private void btnDIVISION_Click(object sender, RoutedEventArgs e)
         {
-            action.Action = '/';
-            tbOutput.Text = "/";
-            if (firstValue.Number == null)
-            {
-                firstValue.Number = number.Number;
-                secondValue.Number = "1";
-                number.Number = null;
-            }
-
-            else
-            {
-                secondValue.Number = number.Number;
-
-                double result = firstValue.StrToDouble(firstValue.Number) / secondValue.StrToDouble(secondValue.Number);
-                tbOutput.Text = result.ToString();
-                firstValue.Number = result.ToString();
-                number.Number = null;
-                secondValue.Number = null;
-            }
+            MathAction("/");
         }
 
         private void btnRESOLVE_Click(object sender, RoutedEventArgs e)
         {
-            // 
-            double result = 0;
-            if (secondValue.Number == null)
-                secondValue.Number = number.Number;
-
-            if (action.Action == '+')
-                result = firstValue.StrToDouble(firstValue.Number) + secondValue.StrToDouble(secondValue.Number);
-            tbOutput.Text = result.ToString();
-            action.Action = '=';
-
-            if (action.Action == '-')
-                result = firstValue.StrToDouble(firstValue.Number) - secondValue.StrToDouble(secondValue.Number);
-            tbOutput.Text = result.ToString();
-            action.Action = '=';
-
-            if (action.Action == '*')
-                result = firstValue.StrToDouble(firstValue.Number) * secondValue.StrToDouble(secondValue.Number);
-            tbOutput.Text = result.ToString();
-            action.Action = '=';
-
-            if (action.Action == '/')
-                result = firstValue.StrToDouble(firstValue.Number) / secondValue.StrToDouble(secondValue.Number);
-            tbOutput.Text = result.ToString();
-            action.Action = '=';
-
-            firstValue.Number = result.ToString();
-            number.Number = null;
-            secondValue.Number = null;
-
-            if (action.Action == '=')
-            {
-                tbOutput.Text = number.Number;
-
-                firstValue.Number = null;
-                number.Number = null;
-                secondValue.Number = null;
-
-            }
-
+            Resolve();
         }
 
         private void btnMEM_Click(object sender, RoutedEventArgs e)
         {
-            if (mem.Number == null)
-                mem.Number = number.Number;
+            if (mem.NumberStr == null)
+                mem.NumberStr = cacheInput.NumberStr;
             else
             {
-                secondValue.Number = mem.Number;
-                tbOutput.Text = mem.Number;
+                cacheInput.NumberStr = mem.NumberStr;
+                tbOutput.Text = mem.NumberStr;
             }
         }
 
         private void btnMEMclr_Click(object sender, RoutedEventArgs e)
         {
-            if (mem.Number != null)
-                mem.Number = null;
+            if (mem.NumberStr != null)
+                mem.NumberStr = null;
         }
     }
 }
