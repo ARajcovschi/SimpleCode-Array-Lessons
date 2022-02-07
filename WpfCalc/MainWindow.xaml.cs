@@ -101,6 +101,7 @@ namespace WpfCalc
             firstValue.Number = null;
             secondValue.Number = null;
             mem.Number = null;
+            action.Action = ' ';
             tbOutput.Text = number.Number;
         }
 
@@ -123,19 +124,22 @@ namespace WpfCalc
             }
 
             else
-            { secondValue.Number = number.Number; }
+            {
+                secondValue.Number = number.Number;
 
-
-            double result = firstValue.StrToDouble(firstValue.Number) + secondValue.StrToDouble(secondValue.Number);
-            tbOutput.Text = result.ToString();
-            firstValue.Number = result.ToString();
-            number.Number = null;
-            secondValue.Number = null;
-
+                double result = firstValue.StrToDouble(firstValue.Number) + secondValue.StrToDouble(secondValue.Number);
+                tbOutput.Text = result.ToString();
+                firstValue.Number = result.ToString();
+                number.Number = null;
+                secondValue.Number = null;
+            }
         }
 
         private void btnMULTIPLY_Click(object sender, RoutedEventArgs e)
         {
+            action.Action = '*';
+            tbOutput.Text = "*";
+
             if (firstValue.Number == null)
             {
                 firstValue.Number = number.Number;
@@ -144,20 +148,21 @@ namespace WpfCalc
             }
 
             else
-            { secondValue.Number = number.Number; }
+            {
+                secondValue.Number = number.Number;
 
-            action.Action = '*';
-            tbOutput.Text = "*";
-
-            double result = firstValue.StrToDouble(firstValue.Number) * secondValue.StrToDouble(secondValue.Number);
-            tbOutput.Text = result.ToString();
-            firstValue.Number = result.ToString();
-            number.Number = null;
-            secondValue.Number = null;
+                double result = firstValue.StrToDouble(firstValue.Number) * secondValue.StrToDouble(secondValue.Number);
+                tbOutput.Text = result.ToString();
+                firstValue.Number = result.ToString();
+                number.Number = null;
+                secondValue.Number = null;
+            }
         }
 
         private void btnMINUS_Click(object sender, RoutedEventArgs e)
         {
+            action.Action = '-';
+            tbOutput.Text = "-";
             if (firstValue.Number == null)
             {
                 firstValue.Number = number.Number;
@@ -166,20 +171,21 @@ namespace WpfCalc
             }
 
             else
-            { secondValue.Number = number.Number; }
+            {
+                secondValue.Number = number.Number;
 
-            action.Action = '-';
-            tbOutput.Text = "-";
-
-            double result = firstValue.StrToDouble(firstValue.Number) - secondValue.StrToDouble(secondValue.Number);
-            tbOutput.Text = result.ToString();
-            firstValue.Number = result.ToString();
-            number.Number = null;
-            secondValue.Number = null;
+                double result = firstValue.StrToDouble(firstValue.Number) - secondValue.StrToDouble(secondValue.Number);
+                tbOutput.Text = result.ToString();
+                firstValue.Number = result.ToString();
+                number.Number = null;
+                secondValue.Number = null;
+            }
         }
 
         private void btnDIVISION_Click(object sender, RoutedEventArgs e)
         {
+            action.Action = '/';
+            tbOutput.Text = "/";
             if (firstValue.Number == null)
             {
                 firstValue.Number = number.Number;
@@ -188,20 +194,20 @@ namespace WpfCalc
             }
 
             else
-            { secondValue.Number = number.Number; }
+            {
+                secondValue.Number = number.Number;
 
-            action.Action = '/';
-            tbOutput.Text = "/";
-
-            double result = firstValue.StrToDouble(firstValue.Number) / secondValue.StrToDouble(secondValue.Number);
-            tbOutput.Text = result.ToString();
-            firstValue.Number = result.ToString();
-            number.Number = null;
-            secondValue.Number = null;
+                double result = firstValue.StrToDouble(firstValue.Number) / secondValue.StrToDouble(secondValue.Number);
+                tbOutput.Text = result.ToString();
+                firstValue.Number = result.ToString();
+                number.Number = null;
+                secondValue.Number = null;
+            }
         }
 
         private void btnRESOLVE_Click(object sender, RoutedEventArgs e)
         {
+            // 
             double result = 0;
             if (secondValue.Number == null)
                 secondValue.Number = number.Number;
@@ -209,23 +215,36 @@ namespace WpfCalc
             if (action.Action == '+')
                 result = firstValue.StrToDouble(firstValue.Number) + secondValue.StrToDouble(secondValue.Number);
             tbOutput.Text = result.ToString();
+            action.Action = '=';
 
             if (action.Action == '-')
                 result = firstValue.StrToDouble(firstValue.Number) - secondValue.StrToDouble(secondValue.Number);
             tbOutput.Text = result.ToString();
+            action.Action = '=';
 
             if (action.Action == '*')
                 result = firstValue.StrToDouble(firstValue.Number) * secondValue.StrToDouble(secondValue.Number);
             tbOutput.Text = result.ToString();
+            action.Action = '=';
 
             if (action.Action == '/')
                 result = firstValue.StrToDouble(firstValue.Number) / secondValue.StrToDouble(secondValue.Number);
             tbOutput.Text = result.ToString();
+            action.Action = '=';
 
             firstValue.Number = result.ToString();
             number.Number = null;
             secondValue.Number = null;
 
+            if (action.Action == '=')
+            {
+                tbOutput.Text = number.Number;
+
+                firstValue.Number = null;
+                number.Number = null;
+                secondValue.Number = null;
+
+            }
 
         }
 
