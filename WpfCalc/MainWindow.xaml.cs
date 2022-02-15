@@ -53,6 +53,7 @@ namespace WpfCalc
                 Resolve();
             }
             mathFunc = operation;
+            //Test comment
         }
         public double Resolve()
         {
