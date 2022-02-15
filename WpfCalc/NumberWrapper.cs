@@ -9,7 +9,12 @@ namespace WpfCalc
     //TODO set проверка на число
     public class NumberWrapper
     {
-        public string NumberStr { get; set; }
+        private string numberStr;
+        public string NumberStr
+        {
+            get { return numberStr; }
+            set { numberStr = value; } //TryParse
+        }
         public double StrToDouble(string number)
         {
             double dNum = double.Parse(number);

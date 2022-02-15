@@ -57,7 +57,8 @@ namespace WpfCalc
         public double Resolve()
         {
             double result = 0;
-
+            if (String.IsNullOrEmpty(cacheInput.NumberStr))
+                return firstValue.Number;    
             if (mathFunc == "+")
                 result = firstValue.Number + cacheInput.Number;
 
@@ -72,7 +73,7 @@ namespace WpfCalc
 
             firstValue.NumberStr = result.ToString();
             tbOutput.Text = result.ToString();
-            cacheInput.NumberStr = null;
+            cacheInput.NumberStr = String.Empty;
             return result;
 
         }
