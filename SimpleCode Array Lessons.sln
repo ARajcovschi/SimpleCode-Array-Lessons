@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibonacci Numbers", "Fibona
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfCalc", "WpfCalc\WpfCalc.csproj", "{8188BB4F-401B-4F0C-8486-18ED29D28D1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalcNew", "WpfCalcNew\WpfCalcNew.csproj", "{28C5B7BC-62CC-47A0-AEBB-BBFCC6830A56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfCalcNew", "WpfCalcNew\WpfCalcNew.csproj", "{28C5B7BC-62CC-47A0-AEBB-BBFCC6830A56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyCalculator", "CurrencyCalculator\CurrencyCalculator.csproj", "{0649739A-98FB-4F57-8A80-C8BB4FCD523C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyCalculator", "JSON Tests\CurrencyCalculator.csproj", "{9E3766B8-71DF-483C-85CB-0D75339123CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,10 +65,10 @@ Global
 		{28C5B7BC-62CC-47A0-AEBB-BBFCC6830A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28C5B7BC-62CC-47A0-AEBB-BBFCC6830A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28C5B7BC-62CC-47A0-AEBB-BBFCC6830A56}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0649739A-98FB-4F57-8A80-C8BB4FCD523C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0649739A-98FB-4F57-8A80-C8BB4FCD523C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0649739A-98FB-4F57-8A80-C8BB4FCD523C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0649739A-98FB-4F57-8A80-C8BB4FCD523C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E3766B8-71DF-483C-85CB-0D75339123CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E3766B8-71DF-483C-85CB-0D75339123CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E3766B8-71DF-483C-85CB-0D75339123CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E3766B8-71DF-483C-85CB-0D75339123CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
